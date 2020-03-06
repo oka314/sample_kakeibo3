@@ -1,0 +1,18 @@
+<h2>ボーナスのしょうさい</h2>
+
+<%= link_to "ここからへんしゅうできるよ",[:edit,@variablecost]%>
+<%= link_to "ボーナスにもどるよ", :variablecosts %>
+
+<table>
+
+  <tr>
+  <th>なまえ</th>
+  <td><%= @variablecost.name%></td>
+</tr>
+
+  <tr>
+    <th>せつめい</th>
+    <td><%= @variablecost.description %></td>
+  </tr>
+  
+</table>

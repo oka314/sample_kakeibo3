@@ -1,9 +1,9 @@
-<% @page_title = "つかったおかね" %>
-<h2><%= @page_title %></h2>
+<h1>ボーナスのとうろく</h1>
+<%= @page_title %>
  
 <h3>メニュー</h3>
 <ul>
-	<li><%= link_to "ここからつかったおかねをとうろくしよう！", :new_fixedcost %></li>
+	<li><%= link_to "ここからボーナスをとうろくしよう！", :new_variablecost %></li>
 </ul>	
 <ul>
 <li><%= link_to "さいしょのがめんにもどるよ", :root %></li>
@@ -13,7 +13,7 @@
 <table>
 	<thead>
 		<tr>
-			<th>つかったこと</th>
+			<th>かもく</th>
 			<th>きんがく</th>
 			<th>そうさ</th>
 		</tr>
@@ -34,7 +34,7 @@
 </table>
  
 <% else %>
-	<p>まだつかったおかねはないよ！</p>
+	<p>まだボーナスはないよ！</p>
 <% end %>
 
 

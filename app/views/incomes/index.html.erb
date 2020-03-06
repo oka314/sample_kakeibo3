@@ -1,7 +1,12 @@
 <% @page_title = "おしごといちらん" %>
-<h2><%= @page_title %></h2>
-<%= link_to "ここからおしごとをとうろくしよう！", :new_income %>
-<%= link_to "さいしょのがめんにもどるよ", :root %>
+<h1><%= @page_title %></h1>
+<h2>メニュー</h2>
+<ul>
+<li><%= link_to "ここからおしごとをとうろくしよう！", :new_income %></li>
+</ul>
+<ul>
+<li><%= link_to "さいしょのがめんにもどるよ", :root %></li>
+</ul>
  
 <% if @incomes.present? %>
 <table>

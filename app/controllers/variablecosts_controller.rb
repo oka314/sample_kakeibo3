@@ -33,7 +33,7 @@ class VariablecostsController < ApplicationController
       redirect_to @variablecost, notice: "ボーナスをとうろくしたよ"
     else
       render "new"
-    end
+    end  
   end
 
   def destroy
@@ -41,4 +41,5 @@ class VariablecostsController < ApplicationController
     @variablecost.destroy
     redirect_to :variablecosts, notice: "けしたよ！"
   end
+end
 

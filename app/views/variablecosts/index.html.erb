@@ -1,7 +1,6 @@
 <h1>ボーナスのとうろく</h1>
-<%= @page_title %>
  
-<h3>メニュー</h3>
+<h2>メニュー</h2>
 <ul>
 	<li><%= link_to "ここからボーナスをとうろくしよう！", :new_variablecost %></li>
 </ul>	
@@ -9,7 +8,7 @@
 <li><%= link_to "さいしょのがめんにもどるよ", :root %></li>
 </ul>
  
-<% if @fixedcosts.present? %>
+<% if @variablecosts.present? %>
 <table>
 	<thead>
 		<tr>
@@ -19,13 +18,13 @@
 		</tr>
 	</thead>
 	<tbody>
-		<% @fixedcosts.each do |fixedcost| %>
+		<% @variablecosts.each do |variablecost| %>
 			<tr>
-				<td><%= fixedcost.name %></td>
-				<td><%= fixedcost.description %></td>
+				<td><%= variablecost.name %></td>
+				<td><%= variablecost.description %></td>
 				<td>
-				<%= link_to "ここからへんしゅう", [:edit, fixedcost] %>
-				<%= link_to "ここからけせるよ", fixedcost, method: :delete,
+				<%= link_to "ここからへんしゅう", [:edit, variablecost] %>
+				<%= link_to "ここからけせるよ", variablecost, method: :delete,
 					data: { confirm: "ほんとうにけしていい？"} %>
 				</td>
 			</tr>

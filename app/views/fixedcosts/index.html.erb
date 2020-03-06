@@ -1,18 +1,16 @@
-<% @page_title = "つかったおかね" %>
-<h2><%= @page_title %></h2>
+<h2>つかったおかねのとうろくがめん</h2>
+<%= @page_title %>
  
-<%= link_to "つかったおかねとうろく", :new_fixedcost %>
+<%= link_to "ここからつかったおかねをとうろくしよう！", :new_fixedcost %>
 <%= link_to "さいしょのがめんにもどるよ", :root %>
-
  
 <% if @fixedcosts.present? %>
 <table>
 	<thead>
 		<tr>
-			<th></th>
 			<th>つかったこと</th>
 			<th>きんがく</th>
-      <th>そうさ</th>
+			<th>そうさ</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -21,8 +19,8 @@
 				<td><%= fixedcost.name %></td>
 				<td><%= fixedcost.description %></td>
 				<td>
-				<%= link_to "ここからへんしゅうできるよ！", [:edit, fixedcost] %>
-				<%= link_to "ここからけせるよ！", fixedcost, method: :delete,
+				<%= link_to "ここからへんしゅう", [:edit, fixedcost] %>
+				<%= link_to "ここからけせるよ", fixedcost, method: :delete,
 					data: { confirm: "ほんとうにけしていい？"} %>
 				</td>
 			</tr>
@@ -31,5 +29,9 @@
 </table>
  
 <% else %>
-	<p>とうろくしているおしごとはないよ。</p>
+	<p>まだつかったおかねはないよ！</p>
 <% end %>
+
+
+
+

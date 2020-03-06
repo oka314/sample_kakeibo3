@@ -1,0 +1,32 @@
+<% @page_title = "おしごといちらん" %>
+<h2><%= @page_title %></h2>
+<%= link_to "ここからおしごとをとうろくしよう！", :new_income %>
+<%= link_to "さいしょのがめんにもどるよ", :root %>
+ 
+<% if @incomes.present? %>
+<table>
+	<thead>
+		<tr>
+			<th>おしごとのなまえ</th>
+			<th>おきゅうりょう</th>
+      <th>そうさ</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @incomes.each do |income| %>
+			<tr>
+				<td><%= income.name %></td>
+				<td><%= income.description %></td>
+        <td>
+				<%= link_to "ここからへんしゅうできるよ", [:edit, income] %>
+        <%= link_to "ここからおしごとをけせるよ！", income, method: :delete,
+					data: { confirm: "ほんとうにけしていい？"} %>
+				</td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
+ 
+<% else %>
+	<p>おしごとはないよ！おとうさん、おかあさんにきいてみよう</p>
+<% end %>

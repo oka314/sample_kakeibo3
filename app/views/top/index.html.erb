@@ -1,13 +1,14 @@
-<h1>マネーチャイルド</h1>
-<p>さいしょのがめんだよ！</p>
+<div class="main">
+<div class="main__top">
+<h1 class= "title">マネーチャイルド</h1>
 
-<h2>おしごととうろく</h2>
-<ul>
-	<li><%= link_to "ここからおしごとをとうろくしよう！", :incomes %></li>
-</ul>
-<ul>
-	<li><%= link_to "つかったおかねのとうろく", :fixedcosts %></li>
-</ul>
-<ul>
-	<li><%= link_to "ボーナス（テスト）のとうろく", :variablecosts %></li>
-</ul>
+
+<div class="menu" >メニュー</div>
+
+<div class="lists-main">
+	<%= link_to "ここからおしごとをとうろくしよう！", :incomes, class:"list"%>
+	<%= link_to "つかったおかねのとうろく", :fixedcosts, class:"list" %>
+	<%= link_to "ボーナス（テスト）のとうろく", :variablecosts,class:"list" %>
+  </div>
+ </div>
+</div>

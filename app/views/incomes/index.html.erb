@@ -1,36 +1,37 @@
-<% @page_title = "おしごといちらん" %>
-<h1><%= @page_title %></h1>
-<h2>メニュー</h2>
-<ul>
-<li><%= link_to "ここからおしごとをとうろくしよう！", :new_income %></li>
-</ul>
-<ul>
-<li><%= link_to "さいしょのがめんにもどるよ", :root %></li>
-</ul>
- 
-<% if @incomes.present? %>
-<table>
-	<thead>
-		<tr>
-			<th>おしごとのなまえ</th>
-			<th>おきゅうりょう</th>
-      <th>そうさ</th>
-		</tr>
-	</thead>
-	<tbody>
-		<% @incomes.each do |income| %>
-			<tr>
-				<td><%= income.name %></td>
-				<td><%= income.description %></td>
-        <td>
-				<%= link_to "ここからへんしゅうできるよ", [:edit, income] %>
-        <%= link_to "ここからおしごとをけせるよ！", income, method: :delete,
-					data: { confirm: "ほんとうにけしていい？"} %>
-				</td>
-			</tr>
-		<% end %>
-	</tbody>
-</table>
+<% content_for :css do %>
+  <%= stylesheet_link_tag 'incomes' %>
+<% end %>
+<div class="incomes-image">
+	<div class="incomes-main">
+		<h1 class="title">おしごといちらん</h1>
+		<h2 class="menu">メニュー</h2>
+		<%= link_to "ここからおしごとをとうろくしよう！", :new_income, class:"link-btn" %>
+		<%= link_to "さいしょのがめんにもどるよ", :root, class:"link-btn"%>
+		<% if @incomes.present? %>
+		<table>
+			<thead>
+				<ul class="list">
+					<li class="list__name">おしごとのなまえ</li>
+					<li class="list__name">おきゅうりょう</li>
+      		<li class="list__name">そうさ</li>
+				</ul>
+			</thead>
+			<tbody>
+				<% @incomes.each do |income| %>
+					<tr>
+						<td class="income-name"><%= income.name %></td>
+						<td class="income-description"><%= income.description %></td>
+        		<td>
+						<%= link_to "ここからへんしゅうできるよ", [:edit, income], class:"link-btn"%>
+        		<%= link_to "ここからおしごとをけせるよ！", income, method: :delete, class:"link-btn",
+						data: { confirm: "ほんとうにけしていい？"} %>
+						</td>
+					</tr>
+				<% end %>
+			</tbody>
+		</table>
+	</div>
+</div>
  
 <% else %>
 	<p>おしごとはないよ！おとうさん、おかあさんにきいてみよう</p>

@@ -1,41 +1,33 @@
-<h1>ボーナスのとうろく</h1>
- 
-<h2>メニュー</h2>
-<ul>
-	<li><%= link_to "ここからボーナスをとうろくしよう！", :new_variablecost %></li>
-</ul>	
-<ul>
-<li><%= link_to "さいしょのがめんにもどるよ", :root %></li>
-</ul>
- 
-<% if @variablecosts.present? %>
-<table>
-	<thead>
-		<tr>
-			<th>かもく</th>
-			<th>きんがく</th>
-			<th>そうさ</th>
-		</tr>
-	</thead>
-	<tbody>
-		<% @variablecosts.each do |variablecost| %>
-			<tr>
-				<td><%= variablecost.name %></td>
-				<td><%= variablecost.description %></td>
-				<td>
-				<%= link_to "ここからへんしゅう", [:edit, variablecost] %>
-				<%= link_to "ここからけせるよ", variablecost, method: :delete,
-					data: { confirm: "ほんとうにけしていい？"} %>
-				</td>
-			</tr>
-		<% end %>
-	</tbody>
-</table>
- 
-<% else %>
-	<p>まだボーナスはないよ！</p>
-<% end %>
-
-
-
-
+<div class="variablecosts-image">
+	<div class="variablecosts-main">
+		<h1 class="title">ボーナスのとうろく</h1>
+		<h2 class="menu">メニュー</h2>
+		<%= link_to "ボーナスとうろく", :new_variablecost,class:"link-btn" %>
+		<%= link_to "さいしょのがめんにもどるよ", :root,class:"link-btn" %>
+		<% if @variablecosts.present? %>
+		<table  border="1" width="100%" style="table-layout: fixed;">
+				<ul class="list">
+					<li class="list__name">なまえ</li>
+					<li class="list__name">きんがく</li>
+      		<li class="list__name">そうさ</li>
+				</ul>
+			<tbody>
+				<% @variablecosts.each do |variablecost| %>
+					<tr>
+						<td class="list-record"><%= variablecost.name %></td>
+						<td calss="list-record"><%= variablecost.description %></td>
+						<td>
+						<%= link_to "へんしゅう", [:edit, variablecost],class:"link-btn" %>
+						<%= link_to "さくじょ", variablecost, method: :delete,class:"link-btn",
+							data: { confirm: "ほんとうにけしていい？"} %>
+						</td>
+					</tr>
+				<% end %>
+			</tbody>
+		</table>
+	</div>
+</div>
+	
+	<% else %>
+		<p>まだボーナスはないよ！</p>
+	<% end %>

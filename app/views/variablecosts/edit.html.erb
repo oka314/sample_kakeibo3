@@ -1,5 +1,9 @@
-<h2>ボーナスをへんしゅう<h2>
-<%= form_for @variablecost do |form| %>
-	<%= render "form", form: form %>
-	<button type='submit' name="button-submit">けってい</button>
-<% end %>
+<div class="variablecosts-edit-image">
+	<div class="variablecosts-edit-main">
+		<h1 class="edit-title">ボーナスをへんしゅう<h1>
+		<%= form_for @variablecost do |form| %>
+			<%= render "form", form: form %>
+			<button type='submit' name="button-submit">けってい</button>
+		<% end %>
+	</div>
+</div>

@@ -1,17 +1,16 @@
 <div class="incomes-show-image">
 	<div class="incomes-show-main">
-		<h2>おしごとのしょうさい</h2>
-		<%= link_to "へんしゅう", [:edit, @income] %>
-		<%= link_to "おしごといちらんにもどるよ", :incomes %>
-		<table>
+		<h1 class="show-title">とうろくできたね！がんばろう！</h1>
+		<%= link_to "おしごといちらんにもどるよ", :incomes,class:"link-btn" %>
+		<%# <table>
 			<tr>
 		   <th>なまえ</th>
 		   <td><%= @income.name %></td>
-		 </tr>
+		 <%# </tr>
 			<tr>
 				<th>ないよう</th>
 				<td><%= @income.description %></td>
-			</tr>
-		</table>
+			<%# </tr>
+		</table> %> 
 	</div>
 </div>

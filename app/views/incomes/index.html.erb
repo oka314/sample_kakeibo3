@@ -1,6 +1,3 @@
-<% content_for :css do %>
-  <%= stylesheet_link_tag 'incomes' %>
-<% end %>
 <div class="incomes-image">
 	<div class="incomes-main">
 		<h1 class="title">おしごといちらん</h1>
@@ -9,21 +6,19 @@
 		<%= link_to "さいしょのがめんにもどるよ", :root, class:"link-btn"%>
 		<% if @incomes.present? %>
 		<table>
-			<thead>
 				<ul class="list">
-					<li class="list__name">おしごとのなまえ</li>
+					<li class="list__name">おしごと</li>
 					<li class="list__name">おきゅうりょう</li>
       		<li class="list__name">そうさ</li>
 				</ul>
-			</thead>
-			<tbody>
+			<tbody aligin=center>
 				<% @incomes.each do |income| %>
 					<tr>
-						<td class="income-name"><%= income.name %></td>
-						<td class="income-description"><%= income.description %></td>
+						<td class="abc" ><%= income.name %></td>
+						<td class="abc"><%= income.description %></td>
         		<td>
-						<%= link_to "ここからへんしゅうできるよ", [:edit, income], class:"link-btn"%>
-        		<%= link_to "ここからおしごとをけせるよ！", income, method: :delete, class:"link-btn",
+						<%= link_to "へんしゅう", [:edit, income], class:"link-btn"%>
+        		<%= link_to "さくじょ", income, method: :delete, class:"link-btn",
 						data: { confirm: "ほんとうにけしていい？"} %>
 						</td>
 					</tr>

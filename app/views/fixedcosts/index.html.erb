@@ -1,41 +1,43 @@
-<% @page_title = "つかったおかね" %>
-<h2><%= @page_title %></h2>
- 
-<h3>メニュー</h3>
-<ul>
-	<li><%= link_to "ここからつかったおかねをとうろくしよう！", :new_fixedcost %></li>
-</ul>	
-<ul>
-<li><%= link_to "さいしょのがめんにもどるよ", :root %></li>
-</ul>
- 
-<% if @fixedcosts.present? %>
-<table>
-	<thead>
-		<tr>
-			<th>つかったこと</th>
-			<th>きんがく</th>
-			<th>そうさ</th>
-		</tr>
-	</thead>
-	<tbody>
-		<% @fixedcosts.each do |fixedcost| %>
-			<tr>
-				<td><%= fixedcost.name %></td>
-				<td><%= fixedcost.description %></td>
-				<td>
-				<%= link_to "ここからへんしゅう", [:edit, fixedcost] %>
-				<%= link_to "ここからけせるよ", fixedcost, method: :delete,
-					data: { confirm: "ほんとうにけしていい？"} %>
-				</td>
-			</tr>
-		<% end %>
-	</tbody>
-</table>
- 
-<% else %>
-	<p>まだつかったおかねはないよ！</p>
-<% end %>
+<div class="fixedcosts-image">	
+	<div class="fixedcosts-main">
+		<h1>つかったおかね</h1>
+		<h2>メニュー</h2>
+		<ul>
+			<li><%= link_to "ここからつかったおかねをとうろくしよう！", :new_fixedcost %></li>
+		</ul>	
+		<ul>
+		<li><%= link_to "さいしょのがめんにもどるよ", :root %></li>
+		</ul>
+
+		<% if @fixedcosts.present? %>
+		<table>
+			<thead>
+				<tr>
+					<th class="list__name">つかったこと</th>
+					<th class="list__name">きんがく</th>
+					<th class="list__name">そうさ</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @fixedcosts.each do |fixedcost| %>
+					<tr>
+						<td><%= fixedcost.name %></td>
+						<td><%= fixedcost.description %></td>
+						<td>
+						<%= link_to "ここからへんしゅう", [:edit, fixedcost] %>
+						<%= link_to "ここからけせるよ", fixedcost, method: :delete,
+							data: { confirm: "ほんとうにけしていい？"} %>
+						</td>
+					</tr>
+				<% end %>
+			</tbody>
+		</table>
+	</div>
+</div>
+	
+	<% else %>
+		<p>まだつかったおかねはないよ！</p>
+	<% end %>
 
 
 

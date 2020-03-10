@@ -1,11 +1,11 @@
-<%= link_to "つかったおかねにもどる", :fixedcosts %>
-<table>
- <tr>
-	 <th><%= form.label :name, "なまえ" %></th>
-	 <td><%= form.text_field :name %></td>
- </tr>
- <tr>
-  <th><%= form.label :description, "いくら" %></th>
-	<td><%= form.text_field :description %></td>
- </tr>
-</table>
+	<%= link_to "つかったおかねにもどる", :fixedcosts,class:"link-btn" %>
+		<table>
+		 <tr>
+			 <th><%= form.label :name, "なまえ" %></th>
+			 <td><%= form.text_field :name %></td>
+		 </tr>
+		 <tr>
+		  <th><%= form.label :description, "いくら" %></th>
+			<td><%= form.text_field :description %></td>
+		 </tr>
+		</table>

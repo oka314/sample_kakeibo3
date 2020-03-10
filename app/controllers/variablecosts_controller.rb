@@ -42,5 +42,3 @@ class VariablecostsController < ApplicationController
     redirect_to :variablecosts, notice: "けしたよ！"
   end
 end
-
-asc

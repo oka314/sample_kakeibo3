@@ -1,17 +1,18 @@
-<h1>ボーナスのしょうさい</h1>
-<%# <%= link_to "ここからへんしゅうできるよ",[:edit,@variablecost]%> %>
-<%= link_to "ボーナスにもどるよ", :variablecosts %>
-
-<table>
-
-  <tr>
-  <th>かもく</th>
-  <td><%= @variablecost.name%></td>
-</tr>
-
-  <tr>
-    <th>きんがく</th>
-    <td><%= @variablecost.description %></td>
-  </tr>
-  
-</table>
+<div class="variablecosts-show-image">
+  <div class="variablecosts-show-main">
+    <h1 class="show-title">ボーナスやったね！楽しみだね！</h1>
+    <%# <%= link_to "ここからへんしゅうできるよ",[:edit,@variablecost]%> 
+    <%= link_to "ボーナスにもどるよ", :variablecosts,class:"link-btn" %>
+    
+    <%# <table>
+      <tr>
+      <th>かもく</th>
+      <td><%= @variablecost.name%></td>
+    <%# </tr>
+      <tr>
+        <th>きんがく</th>
+        <td><%= @variablecost.description %></td>
+      <%# </tr>
+    </table> %>
+  </div>
+</div>

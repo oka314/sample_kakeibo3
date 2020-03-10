@@ -1,0 +1,24 @@
+.variablecosts-show-image{
+  background-image: image-url('variablecosts/show.jpg');
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  .variablecosts-show-main{
+    width: 80%;
+    height: 80%;
+    line-height: 85px;
+    margin: auto;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    .show-title{
+      font-size: 30px;
+    }
+  }
+}

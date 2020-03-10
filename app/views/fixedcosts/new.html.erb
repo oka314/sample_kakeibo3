@@ -1,5 +1,9 @@
-<h2>つかったおかねとうろく</h2>
-<%= form_for @fixedcost do |form| %>
-	<%= render "form", form: form %>
-	<button type='submit' name="button-submit">けってい</button>
-<% end %>
+<div class="fixedcosts-new">
+	<div class="fixedcosts-new__main">
+		<h1 class="new-title">つかったおかねとうろく</h1>
+		<%= form_for @fixedcost do |form| %>
+			<%= render "form", form: form %>
+			<button type='submit' name="button-submit">けってい</button>
+		<% end %>
+	</div>
+</div>

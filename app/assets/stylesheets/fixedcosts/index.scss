@@ -19,8 +19,26 @@
     left: 0;
     line-height:  65px;
     overflow:auto;
-    .list__name{
-      color: red;
+    &__title{
+      font-size: 30px;
+    }
+    &__menu{
+      font-size: 30px;
+    }
+    .list{
+      display: flex;
+      .list__name{
+        font-size: 20px;
+        width: 33%;
+
+      }
+    }
+    .list-record{
+      font-size: 15px;
+    }
+    .link-btn{
+      color: black;
+      font-size: 20px;
     }
   }
 }

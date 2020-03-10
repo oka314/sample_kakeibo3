@@ -1,31 +1,26 @@
 <div class="fixedcosts-image">	
 	<div class="fixedcosts-main">
-		<h1>つかったおかね</h1>
-		<h2>メニュー</h2>
-		<ul>
-			<li><%= link_to "ここからつかったおかねをとうろくしよう！", :new_fixedcost %></li>
-		</ul>	
-		<ul>
-		<li><%= link_to "さいしょのがめんにもどるよ", :root %></li>
-		</ul>
-
+		<h1 class="fixedcosts-main__title">つかったおかね</h1>
+		<h2 class="fixedcosts-main__menu">メニュー</h2>
+		<%= link_to "つかったお金をとうろくしよう！", :new_fixedcost,class:"link-btn" %>
+		<%= link_to "さいしょのがめんにもどるよ", :root,class:"link-btn" %>
 		<% if @fixedcosts.present? %>
-		<table>
+		<table border="1" width="100%" style="table-layout: fixed;">
 			<thead>
-				<tr>
-					<th class="list__name">つかったこと</th>
-					<th class="list__name">きんがく</th>
-					<th class="list__name">そうさ</th>
-				</tr>
+				<ul class="list">
+					<li class="list__name">つかったこと</li>
+					<li class="list__name">きんがく</li>
+					<li class="list__name">そうさ</li>
+				</ul>
 			</thead>
-			<tbody>
+			<tbody >
 				<% @fixedcosts.each do |fixedcost| %>
 					<tr>
-						<td><%= fixedcost.name %></td>
-						<td><%= fixedcost.description %></td>
+						<td class="list-record"><%= fixedcost.name %></td>
+						<td class="list-record"><%= fixedcost.description %></td>
 						<td>
-						<%= link_to "ここからへんしゅう", [:edit, fixedcost] %>
-						<%= link_to "ここからけせるよ", fixedcost, method: :delete,
+						<%= link_to "へんしゅう", [:edit, fixedcost],class:"link-btn"%>
+						<%= link_to "さくじょ", fixedcost, method: :delete,class:"link-btn",
 							data: { confirm: "ほんとうにけしていい？"} %>
 						</td>
 					</tr>

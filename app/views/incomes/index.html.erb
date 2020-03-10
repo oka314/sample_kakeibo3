@@ -5,13 +5,13 @@
 		<%= link_to "ここからおしごとをとうろくしよう！", :new_income, class:"link-btn" %>
 		<%= link_to "さいしょのがめんにもどるよ", :root, class:"link-btn"%>
 		<% if @incomes.present? %>
-		<table>
+		<table  border="1" width="100%" style="table-layout: fixed;">
 				<ul class="list">
 					<li class="list__name">おしごと</li>
 					<li class="list__name">おきゅうりょう</li>
       		<li class="list__name">そうさ</li>
 				</ul>
-			<tbody aligin=center>
+			<tbody >
 				<% @incomes.each do |income| %>
 					<tr>
 						<td class="abc" ><%= income.name %></td>

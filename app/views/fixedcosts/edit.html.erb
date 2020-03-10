@@ -1,5 +1,11 @@
-<h2>つかったおかねをへんしゅう<h2>
-<%= form_for @fixedcost do |form| %>
-	<%= render "form", form: form %>
-	<button type='submit' name="button-submit">けってい</button>
-<% end %>
+<div class="fixedcosts-edit-image">
+	<div class="fixedcosts-edit-main">
+		<h2>つかったおかねをへんしゅう<h2>
+			<%= form_for @fixedcost do |form| %>
+				<%= render "form", form: form %>
+				<button type='submit' name="button-submit">けってい</button>
+			<% end %>
+	</div>
+</div>
+<%# 真ん中に来させていないのはJSの動きで横移動させるて真ん中に持っていかせたいから %>
+<%# できなきゃ真ん中に戻す %>

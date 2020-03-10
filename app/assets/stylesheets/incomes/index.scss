@@ -1,5 +1,5 @@
 .incomes-image{
-  background-image: image-url('work.jpg');
+  background-image: image-url('incomes/index.jpg');
   height: 100vh;
   width: 100vw;
   background-position: center;
@@ -7,7 +7,6 @@
   background-size: cover;
   position: relative;
   .incomes-main{
-    background-color: red;
     height: 80%;
     width: 80%;
     margin: auto;
@@ -19,15 +18,31 @@
     left: 0;
     line-height:  65px;
     overflow:auto;
+    .title{
+      font-size: 30px;
+    }
+    .menu{
+      font-size: 30px;
+    }
     .list{
       display: flex;
       &__name{
         width: 33%;
+        font-size: 25px;
       }
-    
     }
+    .income-menu{
+        color:yellow;
+      }
     .link-btn{
       text-decoration: none;
+      color: black;
+      width: 33%;
+      font-size: 19px;
+    }
+    .abc{
+      width: 33%;
+      font-size: 20px;
     }
   }
 }

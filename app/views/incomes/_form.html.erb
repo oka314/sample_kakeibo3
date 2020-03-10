@@ -1,11 +1,12 @@
-<%= link_to "おしごといちらんにもどる", :incomes %>
+<%= link_to "おしごといちらんにもどる", :incomes , class:"link-btn"%>
 <table>
  <tr>
-	 <th><%= form.label :name, "なまえ" %></th>
-	 <td><%= form.text_field :name %></td>
+	 <th><%= form.label :name, "なまえ",class:"edit-name" %></th>
+	 <td><%= form.text_field :name,class:"edit-name"%></td>
  </tr>
  <tr>
-  <th><%= form.label :description, "いくら" %></th>
-	<td><%= form.text_field :description %></td>
+  <th><%= form.label :description, "いくら", class:"edit-much"%></th>
+	<td><%= form.text_field :description,class:"edit-much" %></td>
  </tr>
 </table>
+

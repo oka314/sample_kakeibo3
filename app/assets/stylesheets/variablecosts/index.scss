@@ -1,12 +1,13 @@
-.incomes-image{
-  background-image: image-url('incomes/index.jpg');
+.variablecosts-image{
+  background-image: image-url('variablecosts/index.jpg');
   height: 100vh;
   width: 100vw;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  .incomes-main{
+ 
+  .variablecosts-main{
     height: 80%;
     width: 80%;
     margin: auto;
@@ -28,11 +29,13 @@
       display: flex;
       &__name{
         width: 33%;
-        font-size: 25px;
+        font-size: 20px;
       }
     }
+    .list-record{
+      font-size: 15px;
+    }
     .link-btn{
-      color:black;
       font-size: 19px;
     }
   }

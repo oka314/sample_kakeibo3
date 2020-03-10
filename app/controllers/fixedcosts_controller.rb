@@ -29,7 +29,7 @@ class FixedcostsController < ApplicationController
 		@fixedcost = Fixedcost.find(params[:id])
 		@fixedcost.assign_attributes(params[:fixedcost])
 		if @fixedcost.save
-			redirect_to @fixedcost, notice: "つかったおかねをとうろくしたよ"
+			redirect_to fixedcosts_path, notice: "つかったおかねをとうろくしたよ"
 		else
 			render "new"
 		end

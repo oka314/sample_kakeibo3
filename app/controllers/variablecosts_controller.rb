@@ -30,7 +30,7 @@ class VariablecostsController < ApplicationController
     @variablecost = Variablecost.find(params[:id])
     @variablecost.assign_attributes(params[:variablecost])
     if @variablecost.save
-      redirect_to @variablecost, notice: "ボーナスをとうろくしたよ"
+      redirect_to variablecosts_path, notice: "ボーナスをとうろくしたよ"
     else
       render "new"
     end  

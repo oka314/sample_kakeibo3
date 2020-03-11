@@ -1,9 +1,10 @@
 .main{
-  background-image: image-url('top/top.jpg');
+  background-image: image-url('top/top.jpeg');
   height: 100vh;
   width: 100vw;
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
   position: relative;
   &__content{
     width: 80%;

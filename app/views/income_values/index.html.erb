@@ -1,0 +1,40 @@
+<% require 'active_support/core_ext/numeric/conversions' %>
+
+<div class="income-values">
+	<div class="income-values__main">
+		<h1 class="data-list font">おしごと データいちらん </h1>
+		<%= link_to "さいしょのがめんにもどるよ", :root, class:"link-btn"%>
+		<p class="day font">日付から先にとうろくしてください</p>
+		<%= form_tag({controller: :income_values, action: :new}, {method: :post}) do %>	
+		<input type="month" name="year_month">
+		<button type='submit' name="button-submit">そうしん</button>
+		<% end %>
+
+		<% if @income_values.present? %>
+		<table border="1" width="100%" style="table-layout: fixed;">
+		  <ul class="list">
+		    <li class="list__name">日付</li>
+		    <li class="list__name">なまえ</li>
+		    <li class="list__name">きんがく</li>
+		    <li class="list__name">ないよう</li>
+				<li class="list__name">そうさ</li>
+		  </tr>
+			<% @income_values.each do |income_value| %>
+			<tr>
+				<td><%= income_value.year_month.strftime('%Y年%m月') %></td>
+				<td><%= @incomes.find(income_value.income_id).name %></td>
+				<td><%= income_value.value.to_s(:delimited) %> 円</td> 
+				<td><%= income_value.description %></td>
+				<td>
+				<%= link_to "へんしゅう", [:edit, income_value] %> 
+				<%= link_to "さくじょ", income_value, method: :delete,
+					data: { confirm: "けしていいですか？"} %>
+				</td>
+			</tr>
+			<% end %>
+		</table>
+	</div>
+</div>
+<% else %>
+	<p>なにもとうろくされてないよ。</p>
+<% end %>

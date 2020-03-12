@@ -1,12 +1,14 @@
-<h2>仕事のデータ登録</h2>
-<div class="toolbar"><%= link_to "仕事データ一覧に戻る", :income_values %></div>
+<h1>おしごとのデータとうろく</h1>
+<div class="toolbar"><%= link_to "収入科目データ一覧に戻る", :income_values %></div>
 <%= form_for(@form, url: income_values_path, method: :post) do |fb| %>
 
+<!-- 年月テーブル -->
 <table>
   <tr>
     <th>日付</th>
     <th>名前</th>
-    <th>金額</th>
+    <th>ねだん</th>
+    <th>ないよう</th>
   </tr>
 
   <% cnt=0 %>

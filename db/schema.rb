@@ -22,17 +22,18 @@ ActiveRecord::Schema.define(version: 2020_03_11_035545) do
   create_table "income_values", force: :cascade do |t|
     t.integer "income_id", null: false
     t.date "year_month"
-    t.integer "value", null: false
-    t.string "description", null: false
+    t.integer "value"
+    t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "incomes", force: :cascade do |t|
     t.string "name", null: false
-    t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "description"
+    t.string "#<ActiveRecord::ConnectionAdapters::SQLite3::TableDefinition:0x00007f83f2683738>"
   end
 
   create_table "variablecosts", force: :cascade do |t|

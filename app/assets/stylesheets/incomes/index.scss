@@ -31,10 +31,20 @@
         font-size: 25px;
       }
     }
-    .link-btn{
-      color:black;
-      font-size: 19px;
+    .link-btn1{
+			display: inline-block;
+			padding: 0 40px;
+			background-color:sienna;
+			color: white;
+			border-bottom: solid 4px black;
+			border-radius: 3px;
 			text-decoration: none;
+		}
+		.link-btn1:active{
+		-webkit-transform: translateY(4px);
+  	transform: translateY(4px);
+		box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+  	border-bottom: none;
 		}
 		
     .title-rainbow{

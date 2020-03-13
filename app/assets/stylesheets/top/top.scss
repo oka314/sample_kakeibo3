@@ -1,3 +1,4 @@
+
 .main{
   background-image: image-url('top/top.jpeg');
   height: 100vh;
@@ -23,7 +24,7 @@
      background-clip: text; 
      -webkit-background-clip: text;
      -webkit-text-fill-color: transparent;
-     animation:title-rainbow 2s linear infinite;
+     animation:title-rainbow 4s linear infinite;
     
     }
     @keyframes title-rainbow {
@@ -52,13 +53,14 @@
 
     .list1{
     width: 16ch;
-    border-right: .08em solid;
+    // border-right: .08em solid;
     overflow: hidden;
     white-space: nowrap;
     animation: typing 3s steps(10, end), caret .5s step-end infinite;
     margin: 0 auto;
     font-size: 40px;
     }
+    
   }
 }
 

@@ -35,7 +35,8 @@
       color:black;
       font-size: 19px;
 			text-decoration: none;
-    }
+		}
+		
     .title-rainbow{
      font: bold 3em/ 1 Verdana,Arial,sans-serif;
      background: linear-gradient(to left, #f00 0%, #f80 14.28%,black 28.56%, #0d0 42.85%, #0dd 57.14%, #00f 71.42%, #e0e 85.71%, #f00 100%) 0% center / 200% auto;;
@@ -47,16 +48,40 @@
     }
     @keyframes title-rainbow {
       to {background-position-x: 200%;}
-    }
-    $blue : #35A7FF;
+		}
+		.rainbow-btn1{
+			font: bold 15px/ 1 Verdana,Arial,sans-serif;
+			background: linear-gradient(to right, pink 10%,purple 3%,gold 18%,brown 15%,white 1.31%,red 54%,green 12%,blue 71%, greenyellow 65%  )0% center / 200% auto;;
+			background-clip: text; 
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			animation:rainbow-btn1 2.5s linear infinite;
+		 
+		 }
+		 @keyframes rainbow-btn1 {
+			 to {background-position-x: 200%;}
+		 }
+
+		 .rainbow-btn2{
+			font: bold 15px/ 1 Verdana,Arial,sans-serif;
+			background: linear-gradient(to left,black 0%,yellow 14.28%,white 28.56%, black 42.85%, yellow 57.14%, white 71.42%, black 85.71%, yellow 100%) 0% center / 200% auto;;
+			background-clip: text; 
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			animation:rainbow-btn2 2.5s linear infinite;
+		 
+		 }
+		 @keyframes rainbow-btn2 {
+			 to {background-position-x: 200%;}
+		 }
+
+
+
+  $blue : #35A7FF;
 	$pink : #FFE74C;
 	$green : #FF5964;
 	$red : #FF5964;
 	$frame : calc(15/100);
-	html{
-		background:linear-gradient(rgba(40,40,40,.9),rgba(20,20,20,.9));
-		height:100%;
-	}
 	.menu{
 		color:white;
 		font-size:250%;

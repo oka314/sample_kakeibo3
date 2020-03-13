@@ -18,7 +18,7 @@ class IncomesController < ApplicationController
   def create
     @income = Income.new(params[:income])
     if  @income.save
-        redirect_to @income,notice:"とうろくしたよ"
+        redirect_to @income
     else
       render "new"
     end
@@ -28,7 +28,7 @@ class IncomesController < ApplicationController
     @income = Income.find(params[:id])
     @income.assign_attributes(params[:income])
     if @income.save
-       redirect_to incomes_path, notice: "おしごとが作れたよ！"
+       redirect_to incomes_path
     else
       render "new"
     end

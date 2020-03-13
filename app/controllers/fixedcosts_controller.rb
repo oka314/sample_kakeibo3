@@ -18,7 +18,7 @@ class FixedcostsController < ApplicationController
 	def create
 		@fixedcost = Fixedcost.new(params[:fixedcost])
 		if @fixedcost.save
-			redirect_to @fixedcost, notice: "つかったおかねをとうろくしたよ"
+			redirect_to @fixedcost
 		else
 			render "new"
 		end
@@ -29,7 +29,7 @@ class FixedcostsController < ApplicationController
 		@fixedcost = Fixedcost.find(params[:id])
 		@fixedcost.assign_attributes(params[:fixedcost])
 		if @fixedcost.save
-			redirect_to fixedcosts_path, notice: "つかったおかねをとうろくしたよ"
+			redirect_to fixedcosts_path
 		else
 			render "new"
 		end
@@ -40,6 +40,6 @@ class FixedcostsController < ApplicationController
 	def destroy
 		@fixedcost = Fixedcost.find(params[:id])
 		@fixedcost.destroy
-		redirect_to :fixedcosts, notice: "つかったおかねをけしたよ"
+		redirect_to :fixedcosts
 	end
 end

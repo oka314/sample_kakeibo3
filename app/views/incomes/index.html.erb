@@ -2,14 +2,14 @@
 	<div class="incomes-main">
 		<h1 class="title-rainbow">おしごとのいちらん</h1>
 		<h2 class="menu">メニュー</h2>
-		<%= link_to "おしごととうろくしよう！", :new_income, class:"link-btn" %>
-		<%= link_to "さいしょのがめんにもどるよ", :root, class:"link-btn"%>
+		<%= link_to "おしごととうろくしよう！", :new_income, class:"link-btn rainbow-btn1" %>
+		<%= link_to "さいしょのがめんにもどるよ", :root, class:"link-btn rainbow-btn2"%>
 		<% if @incomes.present? %>
 		<table  border="1" width="100%" style="table-layout: fixed;">
 				<ul class="list">
-					<li class="list__name">おしごと</li>
-					<li class="list__name">ないよう/ねだん</li>
-      		<li class="list__name">そうさ</li>
+					<li class="list__name list-1">おしごと</li>
+					<li class="list__name list-2">ないよう/ねだん</li>
+      		<li class="list__name list-3">そうさ</li>
 				</ul>
 			<tbody >
 				<% @incomes.each do |income| %>

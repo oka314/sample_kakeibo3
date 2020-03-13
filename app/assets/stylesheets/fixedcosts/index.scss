@@ -40,6 +40,18 @@
       color: black;
       font-size: 20px;
     }
+    .title-rainbow{
+      font: bold 3em/ 1 Verdana,Arial,sans-serif;
+      background: linear-gradient(to left, rgb(105, 214, 105) 0%, rgb(204, 207, 23) .28%,white 16.56%,orange 18.85%, #0dd 57.14%, #00f 71.42%, #e0e 85.71%,pink 100%) 0% center / 200% auto;;
+      background-clip: text; 
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation:title-rainbow 4s linear infinite;
+     
+     }
+     @keyframes title-rainbow {
+       to {background-position-x: 200%;}
+     }
     
   }
 }

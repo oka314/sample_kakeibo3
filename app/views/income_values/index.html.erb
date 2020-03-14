@@ -26,8 +26,8 @@
 				<td><%= income_value.value.to_s(:delimited) %> 円</td> 
 				<td><%= income_value.description %></td>
 				<td>
-				<%= link_to "へんしゅう", [:edit, income_value] %> 
-				<%= link_to "さくじょ", income_value, method: :delete,
+				<%= link_to "へんしゅう", [:edit, income_value] class:"link-btn2" %> 
+				<%= link_to "さくじょ", income_value, method: :delete,class:"link-btn2"
 					data: { confirm: "けしていいですか？"} %>
 				</td>
 			</tr>

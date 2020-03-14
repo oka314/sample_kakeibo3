@@ -5,6 +5,8 @@
 }
 
 #clouds{
+  animation: ground
+  linear 10s infinite both;
   background:url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/56901/bg-clouds2-tinypng.png") repeat-x 0 bottom #ACE6FF;
   width:100%;
   height:230px; 
@@ -18,6 +20,8 @@
 }
 
 #ground {
+  animation: ground
+  linear 10s infinite both;
   background:url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/56901/grass_tile-tinypng.png") repeat-x 0 0 transparent;    
   position: absolute;
   bottom: 0;
@@ -34,6 +38,10 @@
 }
 
 
+@keyframes ground {  
+  0% { background-position: -3584px 100%;} 
+  100% {background-position: 0 100%; } 
+}
 
 .incomes-show-image{
   
@@ -44,6 +52,21 @@
   background:#63D0FF;
   height:100%;
   position: relative;
+  .tuna {
+    animation: walk-cycle 1s steps(12) infinite;
+    background: url(http://stash.rachelnabors.com/img/codepen/tuna_sprite.png) 0 0 no-repeat; 
+    height: 20%;
+    width: 40%;
+    position: absolute;
+    bottom: 1px;
+    left: 50%;
+    margin-left: -200px;
+    transform: translateZ(0);
+  }
+  @keyframes walk-cycle {  
+    0% {background-position: 0 0; } 
+    100% {background-position: 0 -2391px; } 
+  }
   .incomes-show-main{
     width: 80%;
     height: 80%;

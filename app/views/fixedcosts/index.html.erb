@@ -7,15 +7,16 @@
 		<% if @fixedcosts.present? %>
 		<table border="1" width="100%" style="table-layout: fixed;">
 			<thead>
-				<ul class="list">
-					<li class="list__name">つかったこと</li>
-					<li class="list__name">日付/きんがく</li>
-					<li class="list__name">そうさ</li>
-				</ul>
+				<div class="overflow-hide">
+					<button class="list__name button">おしごと</button>
+					<button class="list__name button">日付/ねだん</button>
+      		<button class="list__name button">そうさ</button>
+				</div>	
+			
 			</thead>
 			<tbody >
 				<% @fixedcosts.each do |fixedcost| %>
-					<tr>
+					<tr class="abc">
 						<td class="list-record"><%= fixedcost.name %></td>
 						<td class="list-record"><%= fixedcost.description %></td>
 						<td>

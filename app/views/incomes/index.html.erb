@@ -2,21 +2,23 @@
 	<div class="incomes-main">
 		<h1 class="title-rainbow">おしごとのいちらん</h1>
 		<h2 class="menu">メニュー</h2>
-		<%= link_to "おしごととうろくしよう！", :new_income, class:"link-btn rainbow-btn1" %>
-		<%= link_to "さいしょのがめんにもどるよ", :root, class:"link-btn rainbow-btn2"%>
+		<%= link_to "おしごととうろくしよう！", :new_income, class:"link-btn incomes-btn" %>
+		<%= link_to "さいしょのがめんにもどるよ", :root, class:"link-btn incomes-btn"%>
 		<% if @incomes.present? %>
 		<table  border="1" width="100%" style="table-layout: fixed;">
-				<ul class="list">
-					<li class="list__name list-1">おしごと</li>
-					<li class="list__name list-2">ないよう/ねだん</li>
-      		<li class="list__name list-3">そうさ</li>
-				</ul>
+				
+				<div class="overflow-hide">
+					<button class="list__name list-1 button">おしごと</button>
+					<button class="list__name list-2 button">ないよう/ねだん</button>
+      		<button class="list__name list-3 button">そうさ</button>
+				</div>	
+				
 			<tbody >
 				<% @incomes.each do |income| %>
 					<tr>
 						<td class="abc" ><%= income.name %></td>
 						<td class="abc"><%= income.description %></td>
-        		<td>
+        		<td class="abc">
 						<%= link_to "へんしゅう", [:edit, income], class:"link-btn1"%>
         		<%= link_to "さくじょ", :incomes, method: :delete, class:"link-btn1",
 						data: { confirm: "ほんとうにけしていい？"} %>

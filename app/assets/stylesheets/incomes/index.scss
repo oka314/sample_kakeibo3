@@ -17,20 +17,61 @@
     right: 0;
     left: 0;
     line-height:  65px;
-    overflow:auto;
+		overflow:auto;
+		.abc{
+			background-color: white;
+		}
     .title{
       font-size: 30px;
     }
     .menu{
       font-size: 30px;
     }
-    .list{
-      display: flex;
-      &__name{
+    // .list{
+    //   display: flex;
+      .list__name{
         width: 33%;
         font-size: 25px;
-      }
-    }
+			}
+			.overflow-hide {
+				display: flex;
+				overflow: hidden;
+				position: relative;
+			}
+			
+			
+			.button {
+				height: 100px;
+				width: 33%;
+				text-align: center;
+				line-height: 1.8;
+				color: black;
+				display: block;
+				position: relative;
+				background-color: #D2691E;
+				opacity: 0.8;
+				margin: 0 auto;
+				transform: translateY(30px);
+				transition: transform 200ms ease-in-out;
+				&:after {
+					content: "";
+					display: block;
+					position: absolute;
+					width: 100%;
+					height: 5px;
+					bottom: 0;
+					transform: translateY(-30px);
+						transition: transform 200ms cubic-bezier(.36,-0.17,.64,1.15);
+				}
+				&:hover {
+					transform: translateY(0);
+					&:after {
+						transform: translateY(0);
+					}
+				}
+			}
+
+    // }
     .link-btn1{
 			display: inline-block;
 			padding: 0 40px;
@@ -39,6 +80,7 @@
 			border-bottom: solid 4px black;
 			border-radius: 3px;
 			text-decoration: none;
+			opacity: 0.8;
 		}
 		.link-btn1:active{
 		-webkit-transform: translateY(4px);
@@ -59,31 +101,6 @@
     @keyframes title-rainbow {
       to {background-position-x: 200%;}
 		}
-		.rainbow-btn1{
-			font: bold 15px/ 1 Verdana,Arial,sans-serif;
-			background: linear-gradient(to right, pink 10%,purple 3%,gold 18%,brown 15%,white 1.31%,red 54%,green 12%,blue 71%, greenyellow 65%  )0% center / 200% auto;;
-			background-clip: text; 
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-			animation:rainbow-btn1 2.5s linear infinite;
-		 
-		 }
-		 @keyframes rainbow-btn1 {
-			 to {background-position-x: 200%;}
-		 }
-
-		 .rainbow-btn2{
-			font: bold 15px/ 1 Verdana,Arial,sans-serif;
-			background: linear-gradient(to left,black 0%,yellow 14.28%,white 28.56%, black 42.85%, yellow 57.14%, white 71.42%, black 85.71%, yellow 100%) 0% center / 200% auto;;
-			background-clip: text; 
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-			animation:rainbow-btn2 2.5s linear infinite;
-		 
-		 }
-		 @keyframes rainbow-btn2 {
-			 to {background-position-x: 200%;}
-		 }
 
 
 

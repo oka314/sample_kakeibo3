@@ -53,12 +53,41 @@
 
     .list1{
     width: 16ch;
-    // border-right: .08em solid;
     overflow: hidden;
     white-space: nowrap;
-    animation: typing 3s steps(10, end), caret .5s step-end infinite;
+    animation: typing 1.5s steps(10, end), caret .5s step-end infinite;
     margin: 0 auto;
     font-size: 40px;
+    }
+    .button {
+      padding: 5px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 40px;
+      display: inline-block;
+      border-radius: 0.3em;
+      transition: all 0.2s ease-in-out;
+      position: relative;
+      &:before {
+        content: "";
+        background-color: rgba(255,255,255,0.5);
+        height: 100%;
+        width: 3em;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: -4.5em;
+        transform: skewX(-45deg) translateX(0);
+        transition: none;
+      }
+      &:hover {
+        background-color: aqua;
+        color: black;
+        &:before {
+          transform: skewX(-45deg) translateX(13.5em);
+         transition: all 0.5s ease-in-out;
+        }
+      }
     }
     
   }

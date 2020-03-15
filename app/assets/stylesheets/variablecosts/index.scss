@@ -19,6 +19,7 @@
     left: 0;
     line-height:  65px;
     overflow:auto;
+    
     .overflow-hide {
       display: flex;
       overflow: hidden;
@@ -62,6 +63,7 @@
     }
     .menu{
       font-size: 30px;
+      
     }
     .list{
       display: flex;
@@ -89,5 +91,18 @@
       box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
       border-bottom: none;
     }
+    .title-rainbow{
+      font: bold 3em/ 1 Verdana,Arial,sans-serif;
+      background: linear-gradient(to left, rgb(105, 214, 105) 0%, rgb(204, 207, 23) .28%,white 16.56%,orange 18.85%, #0dd 57.14%, #00f 64.42%, white 85.71%,gold 100%) 0% center / 200% auto;;
+      background-clip: text; 
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation:title-rainbow 5s linear infinite;
+     
+     }
+     @keyframes title-rainbow {
+       to {background-position-x: 200%;}
+     }
+     
   }
 }

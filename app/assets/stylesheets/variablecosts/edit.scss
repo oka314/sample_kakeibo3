@@ -128,6 +128,18 @@
       // opacity: 1;
       transition: opacity 0.2s 0.5s;
     }
-  
+    .title-rainbow{
+      font: bold 3em/ 1 Verdana,Arial,sans-serif;
+      background: linear-gradient(to left, rgb(105, 214, 105) 0%, rgb(204, 207, 23) .28%,white 10.56%,orange 18.85%, #0dd 57.14%, pink 64.42%, white 85.71%,gold 100%) 0% center / 200% auto;;
+      background-clip: text; 
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation:title-rainbow 3s linear infinite;
+     
+     }
+     @keyframes title-rainbow {
+       to {background-position-x: 200%;}
+     }
+
   }
 }

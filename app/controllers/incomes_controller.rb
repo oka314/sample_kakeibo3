@@ -37,6 +37,6 @@ class IncomesController < ApplicationController
   def destroy
     @income = Income.find(params[:id])
     @income.destroy
-     redirect_to :incomes, notice: "けしたよ！"
+     redirect_to incomes_path, notice: "けしたよ！"
 	end
 end

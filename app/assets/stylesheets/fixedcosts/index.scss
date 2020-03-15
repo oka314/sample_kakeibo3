@@ -19,6 +19,231 @@
     left: 0;
     line-height:  65px;
     overflow:auto;
+    $blue : #35A7FF;
+    $pink : #FFE74C;
+    $green : #FF5964;
+    $red : #FF5964;
+    $frame : calc(15/100);
+    .fixedcosts-main__menu{
+      color:white;
+      font-size:250%;
+      text-align:center;
+      font-family:sans-serif;
+      letter-spacing:.10em;
+      text-rendering:optimizeLegibility;
+  
+      text-shadow:
+        1px -1px 0px #555,
+        -1px 2px 0px $blue,
+        -2px 4px 1px $blue,
+        -3px 6px 1px $blue,
+        -4px 8px 1px $pink,
+        -5px 8px 1px $pink,
+        -6px 10px 0px $pink,
+        -7px 12px 1px $green,
+        -8px 14px 1px $green,
+        -9px 16px 1px $green,
+        -10px 18px 1px $red,
+        -11px 20px 1px $red,
+        -12px 22px 0px $red;
+  
+        animation:scrollOne 0.9s forwards infinite;
+    }
+  
+    @keyframes scrollOne{
+      0%{
+        text-shadow:
+        1px -1px 0px #555,
+        -1px 2px 0px $blue,
+        -2px 4px 1px $blue,
+        -3px 6px 1px $blue,
+        -4px 8px 1px $pink,
+        -5px 8px 1px $pink,
+        -6px 10px 0px $pink,
+        -7px 12px 1px $green,
+        -8px 14px 1px $green,
+        -9px 16px 1px $green,
+        -10px 18px 1px $red,
+        -11px 20px 1px $red,
+        -12px 22px 0px $red;
+      }
+      9.09%{
+        text-shadow:
+        1px -1px 0px #555,
+        -1px 2px 0px $red,
+        -2px 4px 1px $blue,
+        -3px 6px 1px $blue,
+        -4px 8px 1px $blue,
+        -5px 8px 1px $pink,
+        -6px 10px 0px $pink,
+        -7px 12px 1px $pink,
+        -8px 14px 1px $green,
+        -9px 16px 1px $green,
+        -10px 18px 1px $green,
+        -11px 20px 1px $red,
+        -12px 22px 0px $red;
+      }
+      18.18%{
+        text-shadow:
+        1px -1px 0px #555,
+        -1px 2px 0px $red,
+        -2px 4px 1px $red,
+        -3px 6px 1px $blue,
+        -4px 8px 1px $blue,
+        -5px 8px 1px $blue,
+        -6px 10px 0px $pink,
+        -7px 12px 1px $pink,
+        -8px 14px 1px $pink,
+        -9px 16px 1px $green,
+        -10px 18px 1px $green,
+        -11px 20px 1px $green,
+        -12px 22px 0px $red;
+      }
+      27.27%{
+        text-shadow:
+        1px -1px 0px #555,
+        -1px 2px 0px $red,
+        -2px 4px 1px $red,
+        -3px 6px 1px $red,
+        -4px 8px 1px $blue,
+        -5px 8px 1px $blue,
+        -6px 10px 0px $blue,
+        -7px 12px 1px $pink,
+        -8px 14px 1px $pink,
+        -9px 16px 1px $pink,
+        -10px 18px 1px $green,
+        -11px 20px 1px $green,
+        -12px 22px 0px $green;
+      }
+      36.36%{
+        text-shadow:
+        1px -1px 0px #555,
+        -1px 2px 0px $green,
+        -2px 4px 1px $red,
+        -3px 6px 1px $red,
+        -4px 8px 1px $red,
+        -5px 8px 1px $blue,
+        -6px 10px 0px $blue,
+        -7px 12px 1px $blue,
+        -8px 14px 1px $pink,
+        -9px 16px 1px $pink,
+        -10px 18px 1px $pink,
+        -11px 20px 1px $green,
+        -12px 22px 0px $green;
+      }
+      45.45%{
+        text-shadow:
+        1px -1px 0px #555,
+        -1px 2px 0px $green,
+        -2px 4px 1px $green,
+        -3px 6px 1px $red,
+        -4px 8px 1px $red,
+        -5px 8px 1px $red,
+        -6px 10px 0px $blue,
+        -7px 12px 1px $blue,
+        -8px 14px 1px $blue,
+        -9px 16px 1px $pink,
+        -10px 18px 1px $pink,
+        -11px 20px 1px $pink,
+        -12px 22px 0px $green;
+      }
+      54.54%{
+        text-shadow:
+        1px -1px 0px #555,
+        -1px 2px 0px $green,
+        -2px 4px 1px $green,
+        -3px 6px 1px $green,
+        -4px 8px 1px $red,
+        -5px 8px 1px $red,
+        -6px 10px 0px $red,
+        -7px 12px 1px $blue,
+        -8px 14px 1px $blue,
+        -9px 16px 1px $blue,
+        -10px 18px 1px $pink,
+        -11px 20px 1px $pink,
+        -12px 22px 0px $pink;
+      }
+      63.63%{
+        text-shadow:
+        1px -1px 0px #555,
+        -1px 2px 0px $pink,
+        -2px 4px 1px $green,
+        -3px 6px 1px $green,
+        -4px 8px 1px $green,
+        -5px 8px 1px $red,
+        -6px 10px 0px $red,
+        -7px 12px 1px $red,
+        -8px 14px 1px $blue,
+        -9px 16px 1px $blue,
+        -10px 18px 1px $blue,
+        -11px 20px 1px $pink,
+        -12px 22px 0px $pink;
+      }
+      72.72%{
+        text-shadow:
+        1px -1px 0px #555,
+        -1px 2px 0px $pink,
+        -2px 4px 1px $pink,
+        -3px 6px 1px $green,
+        -4px 8px 1px $green,
+        -5px 8px 1px $green,
+        -6px 10px 0px $red,
+        -7px 12px 1px $red,
+        -8px 14px 1px $red,
+        -9px 16px 1px $blue,
+        -10px 18px 1px $blue,
+        -11px 20px 1px $blue,
+        -12px 22px 0px $pink;
+      }
+      81.81%{
+        text-shadow:
+        1px -1px 0px #555,
+        -1px 2px 0px $pink,
+        -2px 4px 1px $pink,
+        -3px 6px 1px $pink,
+        -4px 8px 1px $green,
+        -5px 8px 1px $green,
+        -6px 10px 0px $green,
+        -7px 12px 1px $red,
+        -8px 14px 1px $red,
+        -9px 16px 1px $red,
+        -10px 18px 1px $blue,
+        -11px 20px 1px $blue,
+        -12px 22px 0px $blue;
+      }
+      90.90%{
+        text-shadow:
+        1px -1px 0px #555,
+        -1px 2px 0px $blue,
+        -2px 4px 1px $pink,
+        -3px 6px 1px $pink,
+        -4px 8px 1px $pink,
+        -5px 8px 1px $green,
+        -6px 10px 0px $green,
+        -7px 12px 1px $green,
+        -8px 14px 1px $red,
+        -9px 16px 1px $red,
+        -10px 18px 1px $red,
+        -11px 20px 1px $blue,
+        -12px 22px 0px $blue;
+      }
+      100%{
+        text-shadow:
+        1px -1px 0px #555,
+        -1px 2px 0px $blue,
+        -2px 4px 1px $blue,
+        -3px 6px 1px $pink,
+        -4px 8px 1px $pink,
+        -5px 8px 1px $pink,
+        -6px 10px 0px $green,
+        -7px 12px 1px $green,
+        -8px 14px 1px $green,
+        -9px 16px 1px $red,
+        -10px 18px 1px $red,
+        -11px 20px 1px $red,
+        -12px 22px 0px $blue;
+      }
+    }
     .abc{
       background-color: white;
     }
@@ -90,16 +315,15 @@
     }
     .title-rainbow{
       font: bold 3em/ 1 Verdana,Arial,sans-serif;
-      background: linear-gradient(to left, rgb(105, 214, 105) 0%, rgb(204, 207, 23) .28%,white 16.56%,orange 18.85%, #0dd 57.14%, #00f 71.42%, #e0e 85.71%,pink 100%) 0% center / 200% auto;;
+      background: linear-gradient(to left, rgb(105, 214, 105) 0%, rgb(204, 207, 23) .28%,white 16.56%,orange 18.85%, #0dd 57.14%, #00f 64.42%, white 85.71%,gold 100%) 0% center / 200% auto;;
       background-clip: text; 
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      animation:title-rainbow 4s linear infinite;
+      animation:title-rainbow 5s linear infinite;
      
      }
      @keyframes title-rainbow {
        to {background-position-x: 200%;}
      }
-    
   }
 }

@@ -21,4 +21,114 @@
   .new-title{
     font-size: 30px;
   }
+  .title-rainbow{
+    font: bold 3em/ 1 Verdana,Arial,sans-serif;
+    background: linear-gradient(to left, rgb(105, 214, 105) 0%, rgb(204, 207, 23) .28%,white 16.56%,orange 18.85%, #0dd 57.14%, rgb(103, 194, 103) 64.42%, white 85.71%,gold 100%) 0% center / 200% auto;;
+    background-clip: text; 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation:title-rainbow 3s linear infinite;
+   
+   }
+   @keyframes title-rainbow {
+     to {background-position-x: 200%;}
+   }
+   .ghst-btn {
+    position: relative;
+    display: inline-block;
+    top: 35%;
+    width: auto;
+    height: auto;
+    max-width: 20rem;
+    min-height: 1rem;
+    padding: 1rem 2rem 0.8rem 2rem;
+    border: 2px solid black;
+    background-color:rgb(87, 151, 87);
+    opacity: 0.8;
+    background-image:
+      radial-gradient(#333 0%, #333 70%, transparent 71%, transparent 100%),
+      radial-gradient(#333 0%, #333 70%, transparent 71%, transparent 100%),
+      radial-gradient(#333 0%, #333 70%, transparent 71%, transparent 100%);
+    background-size: 0 0, 0 0, 0 0;
+    background-repeat: no-repeat;
+    background-position: 30% 50%, 70% 50%, 50% 80%;
+    text-decoration: none;
+    color:white;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    border-radius: 10px;
+    transform: rotate(0);
+    transition:
+      border 2.5s 1s,
+      color 2s 0.6s,
+      max-width 0.05s 0.6s, 
+      min-height 0.05s 0.6s, 
+      background-color 0.4s,
+      background-size 0s,
+      transform 0.4s,
+      border-radius 0.4s;
+  }
+  .ghst-btn:hover {
+    max-width: 10rem;
+    min-height: 10rem;
+    color: rgba(255,255,255,0);
+    border: 2px solid rgba(255,255,255,0);
+    border-radius: 50%;
+    background-color: pink;
+    background-size: 1.5rem 1.5rem, 1.5rem 1.5rem, 1.5rem 1rem;
+    transform: rotate(400grad);
+    transition:
+      border 0.1s,
+      color 0.15s,
+      max-width 0.25s, 
+      min-height 0.25s, 
+      background-color 0.25s,
+      background-size 0.15s 0.45s,
+      transform 0.4s,
+      border-radius 0.25s 0.3s;
+  }
+  .ghst-btn:before,
+  .ghst-btn:after {
+    position: absolute;
+    transition: all 0.25s;
+  }
+  .ghst-btn:before {
+    content:'ワクワク！';
+    top: 50%;
+    left: 30%;
+    font-size: 20px;
+    width: 100%;
+    color: white;
+    font-weight: 800;
+    letter-spacing: 0;
+    transform: scale(0) translateX(0) translateY(0);
+    transition:
+      color 0s,
+      transform 0s;
+  }
+  .ghst-btn:after {
+    content:'';
+    top: 70%;
+    left: 20%;
+    width: 60%;
+    height: 7%;
+    background: none;
+    border-radius: 50%;
+    box-shadow: 0 5rem 15px rgba(0,0,0,0.15);
+    // transition: opacity 0.05s;
+  }
+  .ghst-btn:hover:before {
+    color:black;
+    transform: scale(1.3) translateX(55%) translateY(-110%);
+    transition:
+      color 0.05s 0.8s,
+      transform 0.1s 0.8s;
+  }
+  .ghst-btn:hover:after {
+    // opacity: 1;
+    transition: opacity 0.2s 0.5s;
+  }
+
+
 }

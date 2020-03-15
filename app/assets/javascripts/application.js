@@ -30,7 +30,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
       force3D:true,
       rotation:0.01,
       z:0.01,
-      //autoRound:false,
       ease: Linear.easeNone
     });
     
@@ -41,8 +40,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     repeat: -1
   });
   
-  // window load event makes sure image is 
-// loaded before running animation
 window.onload = function() {
   
   masterTL
@@ -55,3 +52,33 @@ window.onload = function() {
 };
   
 });
+
+$('.fun-btn').on('click', function(event) {
+  $(this).toggleClass('start-fun');
+  var $page = $('.page');
+  $page.toggleClass('color-bg-start')
+    .toggleClass('bg-animate-color');
+
+
+  $(this).hasClass('start-fun') ?
+    $(this).text('stop the fun') :
+    $(this).text('start the fun');
+
+});
+document.addEventListener("DOMContentLoaded", function(){
+      var el = document.querySelector(".button-bird");
+      var text = document.querySelector(".button-bird__text");
+          el.addEventListener('click', function() {
+            el.classList.toggle('active');
+
+            if(el.classList.contains('active')){
+                console.log('true');
+                text.innerHTML = 'DONE';
+            }else{
+                text.innerHTML = 'SEND';
+            }
+        });
+    });
+
+
+

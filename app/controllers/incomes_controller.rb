@@ -28,15 +28,18 @@ class IncomesController < ApplicationController
     @income = Income.find(params[:id])
     @income.assign_attributes(params[:income])
     if @income.save
-       redirect_to incomes_path
+       redirect_to :income
     else
       render "new"
     end
   end
  
   def destroy
+    binding.pry
     @income = Income.find(params[:id])
     @income.destroy
-     redirect_to incomes_path, notice: "けしたよ！"
-	end
+    redirect_to :incomes, notice: "けしたよ！"
+  end
+  
+
 end

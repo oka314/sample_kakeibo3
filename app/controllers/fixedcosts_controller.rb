@@ -29,7 +29,7 @@ class FixedcostsController < ApplicationController
 		@fixedcost = Fixedcost.find(params[:id])
 		@fixedcost.assign_attributes(params[:fixedcost])
 		if @fixedcost.save
-			redirect_to fixedcosts_path
+			redirect_to controller: :fixedcosts,action: :show
 		else
 			render "new"
 		end

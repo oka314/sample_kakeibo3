@@ -19,23 +19,22 @@ class VariablecostsController < ApplicationController
   def create
     @variablecost = Variablecost.new(params[:variablecost])
     if @variablecost.save
-      redirect_to @variablecost, notice: "ボーナスをとうろくしたよ"
+      redirect_to @variablecost
     else
       render "new"
     end
-
   end
 
   def update
     @variablecost = Variablecost.find(params[:id])
     @variablecost.assign_attributes(params[:variablecost])
     if @variablecost.save
-      redirect_to variablecosts_path, notice: "ボーナスをとうろくしたよ"
+      redirect_to @variablecost, notice: "変動費科目を登録しました"
     else
       render "new"
-    end  
+    end
   end
-
+  
   def destroy
     @variablecost = Variablecost.find(params[:id])
     @variablecost.destroy

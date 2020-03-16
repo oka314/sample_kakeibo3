@@ -35,7 +35,6 @@ class IncomesController < ApplicationController
   end
  
   def destroy
-    binding.pry
     @income = Income.find(params[:id])
     @income.destroy
     redirect_to :incomes, notice: "けしたよ！"
